@@ -53,3 +53,93 @@ abstract class _$Counter extends $Notifier<int> {
     return element.handleCreate(ref, build);
   }
 }
+
+@ProviderFor(DarkMode)
+final darkModeProvider = DarkModeProvider._();
+
+final class DarkModeProvider extends $NotifierProvider<DarkMode, bool> {
+  DarkModeProvider._()
+      : super(
+          from: null,
+          argument: null,
+          retry: null,
+          name: r'darkModeProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$darkModeHash();
+
+  @$internal
+  @override
+  DarkMode create() => DarkMode();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(bool value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<bool>(value),
+    );
+  }
+}
+
+String _$darkModeHash() => r'54d687970391283e693e0beb87bef8e54d34d8da';
+
+abstract class _$DarkMode extends $Notifier<bool> {
+  bool build();
+  @$mustCallSuper
+  @override
+  WhenComplete runBuild() {
+    final ref = this.ref as $Ref<bool, bool>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<bool, bool>, bool, Object?, Object?>;
+    return element.handleCreate(ref, build);
+  }
+}
+
+@ProviderFor(Username)
+final usernameProvider = UsernameProvider._();
+
+final class UsernameProvider extends $NotifierProvider<Username, String> {
+  UsernameProvider._()
+      : super(
+          from: null,
+          argument: null,
+          retry: null,
+          name: r'usernameProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$usernameHash();
+
+  @$internal
+  @override
+  Username create() => Username();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(String value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<String>(value),
+    );
+  }
+}
+
+String _$usernameHash() => r'55c351d11a95bcf4f13f6de98ea0422d2ccb22ba';
+
+abstract class _$Username extends $Notifier<String> {
+  String build();
+  @$mustCallSuper
+  @override
+  WhenComplete runBuild() {
+    final ref = this.ref as $Ref<String, String>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<String, String>, String, Object?, Object?>;
+    return element.handleCreate(ref, build);
+  }
+}
